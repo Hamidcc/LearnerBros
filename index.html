@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learner Bros - Home</title>
+</head>
+<body>
+  <h1>URL INPUT</h1>
+  <form id="proxy-form">
+    <label for="url-input">Enter URL to See:</label>
+    <input type="text" id="url-input" placeholder="https://Iamlearningmathrightnow.com" required>
+    <button type="submit">Go</button>
+  </form>
+
+  <script>
+    document.getElementById('proxy-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const url = document.getElementById('url-input').value;
+      if (url) {
+        window.location.href = `/proxy?target=${encodeURIComponent(url)}`;
+      }
+    });
+  </script>
+</body>
+</html>
