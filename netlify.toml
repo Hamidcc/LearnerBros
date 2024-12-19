@@ -4,3 +4,10 @@
   status = 200
   force = true
   headers = { "X-Forwarded-Host": "yourdomain.netlify.app" }
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self';"
