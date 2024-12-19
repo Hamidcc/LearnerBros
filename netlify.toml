@@ -3,7 +3,6 @@
   to = "https://google.com/:splat"
   status = 200
   force = true
-  headers = { "X-Forwarded-Host": "yourdomain.netlify.app" }
 
 [[headers]]
   for = "/*"
